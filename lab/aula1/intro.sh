@@ -27,7 +27,7 @@ echo "Use pwd para saber o diretório atual" > ./$random_num/.hidden.txt
 mkdir -p "$random_num/.04/04/2020"
 
 # download an image from a specific URL to the innermost folder
-wget -q -P "$random_num/.04/04/2020/" https://raw.githubusercontent.com/luizrennocosta/comp1ufrj/main/lab/1/toriel.jpg
+wget -q -P "$random_num/.04/04/2020/" https://raw.githubusercontent.com/luizrennocosta/comp1ufrj/main/lab/aula1/toriel.jpg
 
 # print the randomly generated number on the screen
 echo "O seu número gerado aleatoriamente é $random_num"
