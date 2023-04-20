@@ -8,7 +8,7 @@ Este é um README, um arquivo comum em diferentes repositórios (será discutido
       - Uso do terminal
       - Comandos básicos
       - Interação com arquivos e pastas
-      - SSH
+      - ssh
 
 # Comandos usados:
 - **ls**: O comando ls é utilizado para listar os arquivos e diretórios presentes no diretório atual ou em um diretório especificado. Por exemplo, o comando "ls" lista os arquivos e diretórios presentes no diretório atual e o comando "ls /pasta" lista os arquivos e diretórios presentes na pasta "pasta".
