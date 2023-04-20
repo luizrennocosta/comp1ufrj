@@ -13,3 +13,9 @@ Aqui está um exemplo de como gerar um par de chaves usando o ssh-keygen:
 ```$ ssh-keygen -t rsa -b 4096```
 
 Esse comando cria um par de chaves RSA de 4096 bits e armazena a chave privada no arquivo ~/.ssh/id_rsa e a chave pública no arquivo ~/.ssh/id_rsa.pub.
+
+Após criar o par de chaves, você pode copiar a chave pública para o servidor SSH usando o comando ssh-copy-id. Isso adiciona a chave pública ao arquivo ~/.ssh/authorized_keys no servidor SSH, permitindo que você se autentique usando a chave privada correspondente.
+
+```$ ssh-copy-id nome_de_usuario@servidor_ssh```
+
+Agora, quando você se conectar ao servidor SSH, o servidor solicitará que você forneça a chave privada correspondente para autenticação. Se a chave privada for válida, o servidor SSH autenticará o usuário e permitirá o acesso ao servidor.
