@@ -30,19 +30,19 @@ Uma breve descrição de comandos úteis no - Linux:
 
 | Semana | Tópico |
 |:-----:|:-----------:|
-|     13/04/2023| Linux Intro 1        |
-|     20/04/2023| Linux Intro 2        |
-|     27/04/2023|  Dúvidas   |
-|     04/05/2023| Clean Code |
-|     11/05/2023| IDEs                  |
-|     18/05/2023| Git               |
-|     25/05/2023| Jupyter              |
-|     01/06/2023| Pandas               |
-|     08/06/2023| ?          |
-|     15/06/2023| Streamlit            |
-|     22/06/2023|          ?           |
-|     29/06/2023|          ?           |
-|     06/07/2023|          ?           |
-|     13/07/2023|          ?           |
-|     20/07/2023| Dúvidas trabalho     |
-|     27/07/2023| Dúvidas trabalho     |
+|     13/04/2023| Linux Intro 1     |
+|     20/04/2023| Linux Intro 2     |
+|     27/04/2023|  Dúvidas          |
+|     04/05/2023| Clean Code        |
+|     11/05/2023| IDEs              |
+|     18/05/2023| Pytest+pdbp     |
+|     25/05/2023| Git               |
+|     01/06/2023| Pandas            |
+|     08/06/2023| ?                 |
+|     15/06/2023| Streamlit         |
+|     22/06/2023|          ?        |
+|     29/06/2023|          ?        |
+|     06/07/2023|          ?        |
+|     13/07/2023|          ?        |
+|     20/07/2023| Dúvidas trabalho  |
+|     27/07/2023| Dúvidas trabalho  |
