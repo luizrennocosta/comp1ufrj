@@ -1,35 +1,37 @@
-# Notas da Aula - Fluxo de Trabalho do Git
+# Notas da Aula - Fluxo de Trabalho do Git com Branches de Development e Pull Requests
 
-## Introdução ao Fluxo de Trabalho do Git
+## Introdução ao Fluxo de Trabalho do Git com Branches de Development e Pull Requests
 
-O fluxo de trabalho do Git é uma sequência de etapas e práticas recomendadas para colaboração e gerenciamento de código usando o Git como sistema de controle de versão. Ele define como os desenvolvedores trabalham juntos, gerenciam branches, fazem commits e mesclam alterações. Existem vários fluxos de trabalho do Git, mas aqui vamos abordar o fluxo de trabalho básico com branches principais.
+O fluxo de trabalho do Git com branches de development e pull requests é uma abordagem colaborativa para o desenvolvimento de software que permite que as equipes trabalhem em paralelo em diferentes recursos e integrem as alterações de forma controlada. Ele envolve a criação de um branch de development para o desenvolvimento contínuo de recursos e o uso de pull requests para revisar e integrar as alterações ao branch principal. Aqui estão as etapas para trabalhar com esse fluxo de trabalho:
 
-## Fluxo de Trabalho Básico com Branches Principais
+## Fluxo de Trabalho com Branches de Development e Pull Requests
 
 1. **Criação do Repositório**: Inicie um repositório Git em seu projeto usando `git init` ou clone um repositório existente usando `git clone <url-do-repositório>`.
 
-2. **Criação de um Branch Principal**: Geralmente, é criado um branch principal chamado "main" ou "master" que contém o código principal do projeto.
+2. **Criação do Branch Principal**: Geralmente, é criado um branch principal chamado "main" ou "master" que contém o código estável do projeto.
 
-3. **Criação de um Branch de Recurso**: Crie um novo branch a partir do branch principal para trabalhar em um recurso específico. Use o comando `git branch <nome-do-branch>` para criar o branch e `git checkout <nome-do-branch>` para alternar para ele.
+3. **Criação do Branch de Development**: Crie um novo branch de development a partir do branch principal usando `git branch development` e `git checkout development`.
 
-4. **Trabalhando no Branch de Recurso**: Faça as alterações necessárias no código, adicione novos arquivos, modifique os existentes e teste suas alterações.
+4. **Trabalho no Branch de Development**: Realize o desenvolvimento contínuo de recursos, correções de bugs e outras melhorias no branch de development. Faça alterações, adicione novos arquivos, modifique os existentes e teste suas alterações.
 
 5. **Adição das Alterações ao Stage**: Use `git add <arquivo>` para adicionar as alterações ao ambiente de staging. Você pode adicionar arquivos individualmente ou usar `git add .` para adicionar todas as alterações.
 
-6. **Commit das Alterações**: Faça o commit das alterações preparadas no ambiente de staging usando `git commit -m "Mensagem do Commit"`. Certifique-se de fornecer uma mensagem descritiva que resuma as alterações feitas.
+6. **Commit das Alterações**: Faça o commit das alterações preparadas no ambiente de staging usando `git commit -m "Mensagem do Commit"`. Forneça uma mensagem descritiva que resuma as alterações feitas.
 
-7. **Atualização do Branch Principal**: Antes de mesclar suas alterações no branch principal, é uma boa prática atualizá-lo para incorporar quaisquer alterações feitas por outros colaboradores. Use `git checkout main` para alternar para o branch principal e `git pull origin main` para obter as alterações mais recentes.
+7. **Envio das Alterações para o Repositório Remoto**: Envie o branch de development para o repositório remoto usando `git push origin development`.
 
-8. **Mesclagem das Alterações**: Com o branch principal atualizado, alterne de volta para o seu branch de recurso usando `git checkout <nome-do-branch>` e, em seguida, use `git merge main` para mesclar as alterações do branch principal em seu branch de recurso.
+8. **Criação do Pull Request**: Acesse a plataforma de hospedagem do repositório (como GitHub ou GitLab) e crie um novo pull request para o branch de development recém-enviado. Forneça uma descrição clara das alterações, detalhes sobre os recursos desenvolvidos e solicite a revisão dos colegas.
 
-9. **Resolução de Conflitos**: Se houver conflitos durante a mesclagem, o Git indicará os arquivos em conflito. Abra esses arquivos em um editor de texto e resolva manualmente as diferenças. Após a resolução, adicione as alterações ao stage e faça o commit novamente.
+9. **Revisão do Pull Request**: Os colegas de equipe revisam o código, fornecem feedback, fazem perguntas e sugerem alterações. Conforme necessário, o autor do pull request faz alterações adicionais no branch de development e envia novos commits.
 
-10. **Teste e Revisão**: Teste suas alterações no branch de recurso para garantir que tudo funcione corretamente. Além disso, é uma prática recomendada solicitar a revisão de colegas antes de prosseguir.
+10. **Integração do Pull Request**: Após a revisão e aprovação, o pull request é mesclado no branch de development. Isso pode ser feito pelo autor do pull request ou por um mantenedor do repositório. Durante a mesclagem, pode ser necessário resolver conflitos.
 
-11. **Mesclagem do Branch de Recurso (feature)**: Após revisar e testar, alterne para o branch principal (`git checkout main`) e use `git merge <nome-do-branch>` para mesclar o branch de recurso no branch principal.
+11. **Atualização do Branch Principal**: Periodicamente, o branch principal (como "main" ou "master") é atualizado com as alterações do branch de development. Isso é feito alternando para o branch principal (`git checkout main`) e usando `git merge development` para mesclar as alterações do branch de development.
 
-12. **Envio para o Repositório Remoto**: Finalmente, envie suas alterações para um repositório remoto usando `git push origin main`. Isso tornará as alterações disponíveis para outros colaboradores.
+12. **Implantação do Branch Principal**: Após mesclar as alterações do branch de development no branch principal, o código está pronto para ser implantado em produção ou em outro ambiente de destino.
+
+![alt](images/git-workflow-release-cycle-2feature.png)
 
 ## Conclusão
 
-O fluxo de trabalho do Git com branches principais permite que você trabalhe de forma colaborativa e gerencie alterações de código de maneira eficiente. Com a criação de branches de recurso, commits adequados e mesclagens corretas, você pode controlar o desenvolvimento do projeto e manter um histórico claro de alterações. É importante praticar esse fluxo de trabalho para se familiarizar com os conceitos e aproveitar os benefícios que o Git oferece.
+O fluxo de trabalho do Git com branches de development e pull requests é uma maneira eficiente de colaborar no desenvolvimento de software em equipe. Ele permite que diferentes recursos sejam desenvolvidos simultaneamente em branches separados, enquanto o branch principal permanece estável. O uso de pull requests facilita a revisão de código, a discussão entre os membros da equipe e o controle das alterações integradas no branch principal. Ao praticar esse fluxo de trabalho, você pode garantir uma integração suave das alterações e manter um histórico claro e organizado do desenvolvimento do projeto.
