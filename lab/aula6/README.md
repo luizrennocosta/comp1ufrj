@@ -33,9 +33,9 @@ Existem muitos recursos no GitHub para o aprendizado do Git no geral, e da plata
 
 1. **git init**: Inicializa um novo repositório Git no diretório atual.
 
-2. **git clone \<url-do-repositório>**: Cria uma cópia local de um repositório remoto.
+2. `git clone <url-do-repositório>`: Cria uma cópia local de um repositório remoto.
 
-3. **git add \<arquivo>**: Prepara as alterações de um arquivo para o próximo commit.
+3. `git add <arquivo>`: Prepara as alterações de um arquivo para o próximo commit.
 
 4. **git commit -m "Mensagem do Commit"**: Cria um novo commit com as alterações preparadas.
 
