@@ -31,33 +31,33 @@ Existem muitos recursos no GitHub para o aprendizado do Git no geral, e da plata
 
 ## Comandos Básicos do Git
 
-1. **git init**: Inicializa um novo repositório Git no diretório atual.
+1. `git init`: Inicializa um novo repositório Git no diretório atual.
 
-2. **git clone \<url-do-repositório>**: Cria uma cópia local de um repositório remoto.
+2. `git clone <url-do-repositório>`: Cria uma cópia local de um repositório remoto.
 
-3. **git add \<arquivo>**: Prepara as alterações de um arquivo para o próximo commit.
+3. `git add <arquivo>`: Prepara as alterações de um arquivo para o próximo commit.
 
-4. **git commit -m "Mensagem do Commit"**: Cria um novo commit com as alterações preparadas.
+4. `git commit -m "Mensagem do Commit"`: Cria um novo commit com as alterações preparadas.
 
-5. **git status**: Verifica o status do repositório, incluindo arquivos modificados, preparados e não rastreados.
+5. `git status`: Verifica o status do repositório, incluindo arquivos modificados, preparados e não rastreados.
 
-6. **git diff**: Mostra as diferenças entre as alterações atuais e o último commit.
+6. `git diff`: Mostra as diferenças entre as alterações atuais e o último commit.
 
-7. **git log**: Exibe o histórico de commits do branch atual.
+7. `git log`: Exibe o histórico de commits do branch atual.
 
-8. **git branch**: Lista todos os branches do repositório.
+8. `git branch`: Lista todos os branches do repositório.
 
-9. **git branch \<nome-do-branch>**: Cria um novo branch.
+9. `git branch <nome-do-branch>`: Cria um novo branch.
 
-10. **git checkout \<nome-do-branch>**: Alterna para um branch diferente.
+10. `git checkout <nome-do-branch>`: Alterna para um branch diferente.
 
-11. **git merge \<nome-do-branch>**: Mescla as alterações do branch especificado no branch atual.
+11. `git merge <nome-do-branch>`: Mescla as alterações do branch especificado no branch atual.
 
-12. **git remote add \<nome-remoto> \<url-remoto>**: Adiciona um repositório remoto.
+12. `git remote add <nome-remoto> <url-remoto>`: Adiciona um repositório remoto.
 
-13. **git pull \<nome-remoto> \<nome-do-branch>**: Obtém e mescla as alterações de um repositório remoto.
+13. `git pull <nome-remoto> <nome-do-branch>`: Obtém e mescla as alterações de um repositório remoto.
 
-14. **git push \<nome-remoto> \<nome-do-branch>**: Envia os commits locais para um repositório remoto.
+14. `git push <nome-remoto> <nome-do-branch>`: Envia os commits locais para um repositório remoto.
 
 ## Exemplos de Fluxos de Trabalho no Git
 
