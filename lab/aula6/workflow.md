@@ -4,6 +4,8 @@
 
 O fluxo de trabalho do Git com branches de development e pull requests é uma abordagem colaborativa para o desenvolvimento de software que permite que as equipes trabalhem em paralelo em diferentes recursos e integrem as alterações de forma controlada. Ele envolve a criação de um branch de development para o desenvolvimento contínuo de recursos e o uso de pull requests para revisar e integrar as alterações ao branch principal. Aqui estão as etapas para trabalhar com esse fluxo de trabalho:
 
+![alt](images/git-workflow-release-cycle-2feature.png)
+
 ## Fluxo de Trabalho com Branches de Development e Pull Requests
 
 1. **Criação do Repositório**: Inicie um repositório Git em seu projeto usando `git init` ou clone um repositório existente usando `git clone <url-do-repositório>`.
@@ -30,7 +32,6 @@ O fluxo de trabalho do Git com branches de development e pull requests é uma ab
 
 12. **Implantação do Branch Principal**: Após mesclar as alterações do branch de development no branch principal, o código está pronto para ser implantado em produção ou em outro ambiente de destino.
 
-![alt](images/git-workflow-release-cycle-2feature.png)
 
 ## Conclusão
 
