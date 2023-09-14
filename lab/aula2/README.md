@@ -19,9 +19,10 @@ Olá! O conteúdo da segunda aula é uma continuação da aula1, onde o principa
 1. acessar o servidor com a conta de teste para ssh `ssh-teste-123`
 2. criar um arquivo com o nome do seu usuário (ex: luiz.renno)-> isso vai ser usado para criar sua conta no servidor do lipe
 3. depois da conta estar criada, acesse e redefina a senha **imediatamente** (comando `passwd`) 
-4. volte para sua maquina local, fora do servidor, e crie seu par de chaves ssh
-5. coloque sua chave publica no servidor no arquivo `~/.ssh/authorized_keys`
-6. em sua maquina local, edite o arquivo `~/.ssh/config` e coloque configurações de acesso ao servidor do lipe (hint: arquivo `/home/readme` no servidor)
+4. volte para sua maquina local, fora do servidor, e crie seu par de chaves ssh (comando `ssh-keygen`)
+5. logue no servidor usando a conta recém criada (no passo 2) e a senha dada em sala de aula
+6. coloque o conteúdo sua chave publica (`cat ~/.ssh/id_rsa.pub`) no servidor no arquivo `~/.ssh/authorized_keys`
+7. em sua maquina local, edite o arquivo `~/.ssh/config` e coloque configurações de acesso ao servidor do lipe (hint: arquivo `/home/readme` no servidor)
 ------------------------
 
 
