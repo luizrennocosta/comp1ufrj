@@ -5,7 +5,6 @@ import importlib.util
 import pandas as pd
 import xml.etree.ElementTree as ET
 import sys
-from pytest_harvest import get_session_synthesis_dct
 import re
 import numpy as np
 
@@ -20,7 +19,7 @@ dotenv.load_dotenv()
 # Setup gspread with Google Sheets API credentials
 gc = gspread.service_account(filename=os.getenv('GOOGLE_CRED_FILE'))
 
-bonus_questions = {1: [7]}
+bonus_questions = {1: [7], 2: [6]}
 
 def parse_test_results(filename):
     tree = ET.parse(filename)
@@ -151,7 +150,7 @@ def grade_students(local_folder):
     # Convert the list of rows to a DataFrame
     now_time = pd.Timestamp.now()
     df = pd.DataFrame(rows)
-    df = df.groupby(by=['DRE', 'question']).agg({'list': 'first', 'status': sum, 'error_message': sum, 'n_tests': sum}).reset_index()
+    df = df.groupby(by=['DRE', 'question']).agg({'list': 'first', 'status': 'sum', 'error_message': 'sum', 'n_tests': 'sum'}).reset_index()
     df['updated_at'] = now_time
     df['updated_at'] = df['updated_at'].astype(str)
     
