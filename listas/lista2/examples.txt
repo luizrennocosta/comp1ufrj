@@ -1,0 +1,160 @@
+
+********* Questão 1 *********
+Entrada: ({'Heat X Bulls': 'Heat', 'Raptors X Bulls': 'Raptors', 'Raptors X Celtics': 'Raptors', 'Hawks X Bulls': 'Bulls', 'Hawks X Celtics': 'Celtics'}, 'Heat')
+Saída: ['Heat X Bulls']
+
+Entrada: ({'Heat X Hawks': 'Hawks', 'Bulls X Hawks': 'Bulls', 'Knicks X Bulls': 'Bulls', 'Knicks X Hawks': 'Hawks', 'Celtics X Heat': 'Celtics'}, 'Hawks')
+Saída: ['Heat X Hawks', 'Knicks X Hawks']
+
+Entrada: ({'Heat X Celtics': 'Heat', 'Knicks X Raptors': 'Knicks', 'Hawks X Heat': 'Hawks', 'Raptors X Celtics': 'Raptors', 'Celtics X Bulls': 'Bulls'}, 'Celtics')
+Saída: []
+
+Entrada: ({'Hawks X Bulls': 'Bulls', 'Hawks X Celtics': 'Celtics', 'Raptors X Bulls': 'Bulls', 'Heat X Knicks': 'Knicks', 'Hawks X Heat': 'Heat'}, 'Knicks')
+Saída: ['Heat X Knicks']
+
+Entrada: ({'Celtics X Bulls': 'Celtics', 'Bulls X Hawks': 'Hawks', 'Knicks X Raptors': 'Raptors', 'Celtics X Knicks': 'Knicks', 'Hawks X Raptors': 'Hawks'}, 'Raptors')
+Saída: ['Knicks X Raptors']
+
+Entrada: ({'Raptors X Heat': 'Raptors', 'Bulls X Hawks': 'Bulls', 'Bulls X Celtics': 'Bulls', 'Raptors X Bulls': 'Bulls', 'Heat X Bulls': 'Heat'}, 'Bulls')
+Saída: ['Bulls X Hawks', 'Bulls X Celtics', 'Raptors X Bulls']
+
+Entrada: ({'Heat X Celtics': 'Celtics', 'Hawks X Raptors': 'Raptors', 'Celtics X Knicks': 'Celtics', 'Knicks X Heat': 'Heat', 'Raptors X Knicks': 'Knicks'}, 'Bulls')
+Saída: []
+
+Entrada: ({'Raptors X Celtics': 'Raptors', 'Knicks X Raptors': 'Knicks', 'Bulls X Heat': 'Bulls', 'Heat X Hawks': 'Hawks', 'Hawks X Raptors': 'Hawks'}, 'Knicks')
+Saída: ['Knicks X Raptors']
+
+Entrada: ({'Raptors X Celtics': 'Raptors', 'Raptors X Knicks': 'Knicks', 'Knicks X Hawks': 'Hawks', 'Hawks X Knicks': 'Knicks', 'Bulls X Raptors': 'Raptors'}, 'Raptors')
+Saída: ['Raptors X Celtics', 'Bulls X Raptors']
+
+Entrada: ({'Celtics X Knicks': 'Knicks', 'Knicks X Celtics': 'Celtics', 'Bulls X Raptors': 'Raptors', 'Knicks X Raptors': 'Knicks', 'Heat X Celtics': 'Celtics'}, 'Heat')
+Saída: []
+
+
+********* Questão 2 *********
+Entrada: {'Megumi': [0.19, 7.74], 'Yuta': [0.1, 6.15], 'Maki': [0.2, 1.44], 'Kashimo': [5.4, 8.88], 'Nobara': [4.46, 1.12]}
+Saída: {'Megumi': 3.9650000000000003, 'Yuta': 3.125, 'Maki': 0.82, 'Kashimo': 7.140000000000001, 'Nobara': 2.79}
+
+Entrada: {'Yuta': [8.24, 2.28], 'Yuji': [2.14, 4.65], 'Nobara': [4.79, 6.4], 'Maki': [3.8, 6.75], 'Geto': [7.4, 4.69]}
+Saída: {'Yuta': 5.26, 'Yuji': 3.3950000000000005, 'Nobara': 5.595000000000001, 'Maki': 5.275, 'Geto': 6.045}
+
+Entrada: {'Yuta': [9.08, 1.97], 'Megumi': [0.47, 6.36], 'Maki': [7.58, 1.82], 'Kashimo': [6.79, 4.65], 'Gojo': [4.47, 5.74]}
+Saída: {'Yuta': 5.525, 'Megumi': 3.415, 'Maki': 4.7, 'Kashimo': 5.720000000000001, 'Gojo': 5.105}
+
+Entrada: {'Nobara': [4.24, 3.1], 'Megumi': [3.91, 3.19], 'Geto': [0.62, 1.44], 'Yuta': [5.26, 6.32], 'Gojo': [9.49, 3.4]}
+Saída: {'Nobara': 3.67, 'Megumi': 3.55, 'Geto': 1.03, 'Yuta': 5.79, 'Gojo': 6.445}
+
+Entrada: {'Maki': [1.6, 7.6], 'Megumi': [3.34, 2.36], 'Yuji': [4.98, 3.48], 'Kashimo': [0.91, 0.85], 'Geto': [3.65, 9.9]}
+Saída: {'Maki': 4.6, 'Megumi': 2.8499999999999996, 'Yuji': 4.23, 'Kashimo': 0.88, 'Geto': 6.775}
+
+Entrada: {'Kashimo': [5.88, 0.51], 'Gojo': [7.5, 8.23], 'Geto': [5.69, 9.24], 'Yuta': [4.69, 2.52], 'Nobara': [9.71, 3.15]}
+Saída: {'Kashimo': 3.195, 'Gojo': 7.865, 'Geto': 7.465, 'Yuta': 3.6050000000000004, 'Nobara': 6.430000000000001}
+
+Entrada: {'Nobara': [3.16, 0.35], 'Gojo': [8.81, 9.74], 'Geto': [9.55, 7.34], 'Yuta': [3.12, 5.56], 'Kashimo': [7.0, 0.19]}
+Saída: {'Nobara': 1.7550000000000001, 'Gojo': 9.275, 'Geto': 8.445, 'Yuta': 4.34, 'Kashimo': 3.595}
+
+Entrada: {'Kashimo': [0.54, 7.27], 'Yuta': [4.71, 9.15], 'Maki': [6.22, 2.17], 'Gojo': [2.38, 8.15], 'Nobara': [1.65, 9.75], 'Geto': [2.86, 2.83]}
+Saída: {'Kashimo': 3.905, 'Yuta': 6.93, 'Maki': 4.195, 'Gojo': 5.265000000000001, 'Nobara': 5.7, 'Geto': 2.8449999999999998}
+
+Entrada: {'Megumi': [4.22, 1.46], 'Geto': [6.91, 0.88], 'Maki': [4.91, 0.11], 'Nobara': [0.7, 1.27], 'Yuji': [6.32, 0.98]}
+Saída: {'Megumi': 2.84, 'Geto': 3.895, 'Maki': 2.5100000000000002, 'Nobara': 0.985, 'Yuji': 3.6500000000000004}
+
+Entrada: {'Nobara': [8.13, 0.14], 'Geto': [6.27, 9.7], 'Megumi': [1.48, 5.54], 'Gojo': [9.5, 0.25]}
+Saída: {'Nobara': 4.135000000000001, 'Geto': 7.984999999999999, 'Megumi': 3.51, 'Gojo': 4.875}
+
+
+********* Questão 3 *********
+Entrada: ['aka', 'ao', 'kuro', 'murasaki', 'shiro', 'shiro', 'murasaki', 'midori', 'kuro', 'ao', 'murasaki', 'aka']
+Saída: [2, 2, 2, 3, 2, 1]
+
+Entrada: ['shiro', 'ao', 'midori', 'aka', 'midori', 'aka', 'kuro', 'aka', 'kuro', 'aka', 'kuro', 'murasaki']
+Saída: [1, 1, 2, 4, 3, 1]
+
+Entrada: ['shiro', 'aka', 'ao', 'murasaki', 'midori', 'murasaki', 'aka', 'midori', 'shiro', 'murasaki', 'kuro', 'ao']
+Saída: [2, 2, 2, 3, 2, 1]
+
+Entrada: ['kuro', 'murasaki', 'midori', 'murasaki', 'aka', 'shiro', 'aka', 'ao', 'kuro', 'kuro', 'aka', 'ao']
+Saída: [3, 2, 1, 3, 1, 2]
+
+Entrada: ['kuro', 'aka', 'ao', 'kuro', 'murasaki', 'shiro', 'kuro', 'shiro', 'kuro', 'midori', 'midori', 'aka']
+Saída: [4, 2, 1, 1, 2, 2]
+
+Entrada: ['murasaki', 'ao', 'shiro', 'kuro', 'midori', 'murasaki', 'murasaki', 'aka', 'murasaki', 'ao', 'aka', 'kuro']
+Saída: [4, 2, 1, 2, 1, 2]
+
+Entrada: ['ao', 'ao', 'murasaki', 'aka', 'murasaki', 'midori', 'midori', 'shiro', 'kuro', 'midori', 'ao', 'ao']
+Saída: [4, 2, 1, 3, 1, 1]
+
+Entrada: ['shiro', 'shiro', 'aka', 'kuro', 'ao', 'midori', 'shiro', 'murasaki', 'aka', 'murasaki', 'midori', 'ao']
+Saída: [3, 2, 1, 2, 2, 2]
+
+Entrada: ['ao', 'ao', 'aka', 'kuro', 'kuro', 'shiro', 'murasaki', 'kuro', 'midori', 'kuro', 'midori', 'murasaki']
+Saída: [2, 1, 4, 1, 2, 2]
+
+Entrada: ['aka', 'kuro', 'midori', 'shiro', 'murasaki', 'aka', 'murasaki', 'murasaki', 'midori', 'murasaki', 'midori', 'ao']
+Saída: [2, 1, 3, 1, 4, 1]
+
+
+********* Questão 4 *********
+Entrada: [5.17, 0.57, 2.25, -0.08, -2.99]
+Saída: [0.19342359767891684, 1.7543859649122808, 0.4444444444444444, -12.5, -0.33444816053511706]
+
+Entrada: [3.07, 7.9, 5.97, -2.4, 8.09]
+Saída: [0.32573289902280134, 0.12658227848101264, 0.16750418760469013, -0.4166666666666667, 0.12360939431396786]
+
+Entrada: [-7.92, -5.82, -6.03, 2.97, -6.7]
+Saída: [-0.12626262626262627, -0.1718213058419244, -0.16583747927031509, 0.33670033670033667, -0.14925373134328357]
+
+Entrada: [8.1, -0.4, -5.61, 5.16, 2.62]
+Saída: [0.1234567901234568, -2.5, -0.17825311942959002, 0.19379844961240308, 0.38167938931297707]
+
+Entrada: [-6.7, 7.87, -6.84, 1.43, -0.09]
+Saída: [-0.14925373134328357, 0.12706480304955528, -0.14619883040935672, 0.6993006993006994, -11.11111111111111]
+
+Entrada: [8.25, 6.55, 0.99, -8.03, -0.93]
+Saída: [0.12121212121212122, 0.15267175572519084, 1.0101010101010102, -0.12453300124533002, -1.075268817204301]
+
+Entrada: [-6.48, 4.5, -5.7, 6.62, 6.29]
+Saída: [-0.15432098765432098, 0.2222222222222222, -0.17543859649122806, 0.1510574018126888, 0.1589825119236884]
+
+Entrada: [-0.69, -3.78, -7.09, -4.74, 2.18]
+Saída: [-1.4492753623188408, -0.2645502645502646, -0.14104372355430184, -0.21097046413502107, 0.4587155963302752]
+
+Entrada: [-5.01, 0.15, -3.14, 7.45, -6.76]
+Saída: [-0.1996007984031936, 6.666666666666667, -0.3184713375796178, 0.1342281879194631, -0.14792899408284024]
+
+Entrada: [3.48, 6.52, -4.27, -9.92, -5.62]
+Saída: [0.28735632183908044, 0.15337423312883436, -0.234192037470726, -0.10080645161290323, -0.17793594306049823]
+
+
+********* Questão 5 *********
+Entrada: notas_exemplo0.txt
+Saída: {0: 5.33, 1111111: 3.17, 2222222: 6.0, 3333333: 4.17, 4444444: 5.0, 5555555: 5.67, 6666666: 5.17, 7777777: 2.5, 8888888: 2.83, 9999999: 2.33}
+
+Entrada: notas_exemplo1.txt
+Saída: {0: 6.83, 1111111: 5.33, 2222222: 3.17, 3333333: 2.67, 4444444: 3.0, 5555555: 2.17, 6666666: 5.83, 7777777: 5.17, 8888888: 3.17, 9999999: 2.67}
+
+Entrada: notas_exemplo2.txt
+Saída: {0: 3.17, 1111111: 3.5, 2222222: 3.67, 3333333: 4.17, 4444444: 5.83, 5555555: 2.67, 6666666: 3.67, 7777777: 4.83, 8888888: 4.17, 9999999: 6.5}
+
+Entrada: notas_exemplo3.txt
+Saída: {0: 4.83, 1111111: 6.33, 2222222: 3.83, 3333333: 4.83, 4444444: 4.33, 5555555: 4.5, 6666666: 4.17, 7777777: 2.33, 8888888: 1.33, 9999999: 2.33}
+
+Entrada: notas_exemplo4.txt
+Saída: {0: 3.17, 1111111: 4.33, 2222222: 1.83, 3333333: 5.83, 4444444: 3.17, 5555555: 3.0, 6666666: 6.17, 7777777: 3.33, 8888888: 4.0, 9999999: 5.0}
+
+Entrada: notas_exemplo5.txt
+Saída: {0: 1.5, 1111111: 4.83, 2222222: 3.0, 3333333: 3.67, 4444444: 4.83, 5555555: 5.83, 6666666: 5.83, 7777777: 1.67, 8888888: 3.0, 9999999: 4.17}
+
+Entrada: notas_exemplo6.txt
+Saída: {0: 3.33, 1111111: 4.33, 2222222: 2.0, 3333333: 5.83, 4444444: 5.33, 5555555: 6.17, 6666666: 5.5, 7777777: 5.0, 8888888: 1.5, 9999999: 4.33}
+
+Entrada: notas_exemplo7.txt
+Saída: {0: 6.17, 1111111: 4.33, 2222222: 3.5, 3333333: 2.0, 4444444: 5.83, 5555555: 5.0, 6666666: 4.33, 7777777: 3.5, 8888888: 3.5, 9999999: 5.5}
+
+Entrada: notas_exemplo8.txt
+Saída: {0: 4.83, 1111111: 4.5, 2222222: 3.5, 3333333: 2.67, 4444444: 4.33, 5555555: 4.5, 6666666: 4.83, 7777777: 5.5, 8888888: 4.83, 9999999: 3.33}
+
+Entrada: notas_exemplo9.txt
+Saída: {0: 4.5, 1111111: 4.0, 2222222: 3.33, 3333333: 2.33, 4444444: 4.17, 5555555: 3.5, 6666666: 3.17, 7777777: 4.33, 8888888: 2.33, 9999999: 5.83}
+
