@@ -127,11 +127,18 @@ def grade_students(local_folder):
             except:
                 print(f"Couldn't parse student ID and list ID from filename {student_file}")
                 continue
-            list_id = int(list_id.replace('lista', ''))
+            try:
+                list_id = int(list_id.replace('lista', ''))
+            except:
+                print(f"Couldn't parse list id from filename {student_file}")
+                continue
             student_module_path = os.path.join(f'{local_folder}/submissions', student_file)
-
-            student_module = import_student_module(student_id, student_module_path)
             
+            try:
+                student_module = import_student_module(student_id, student_module_path)
+            except Exception as e:
+                print(f'file for student {student_file} with syntax errors')
+                continue
             run_tests_for_student(local_folder, student_module)
             
             test_results = parse_test_results('results.xml')

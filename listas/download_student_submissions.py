@@ -36,13 +36,15 @@ def download_student_submissions(g_drive_folder_id, local_folder):
     # Download the files
     for filename, file_info in filtered_files.items():
         request = drive_service.files().get_media(fileId=file_info['id'])
-        with open(f'{local_folder}/submissions/{filename}', 'wb') as f:
-            downloader = MediaIoBaseDownload(f, request)
-            done = False
-            while done is False:
-                status, done = downloader.next_chunk()
-                print(f"Downloaded {int(status.progress() * 100)}% of {filename}")
-
+        try:
+            with open(f'{local_folder}/submissions/{filename}', 'wb') as f:
+                downloader = MediaIoBaseDownload(f, request)
+                done = False
+                while done is False:
+                    status, done = downloader.next_chunk()
+                    print(f"Downloaded {int(status.progress() * 100)}% of {filename}")
+        except:
+            print(f'file {filename} failed to download')
     print("All files downloaded!")
     
     
