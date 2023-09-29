@@ -143,6 +143,9 @@ def grade_students(local_folder):
             except Exception as e:
                 print(f'file for student {student_file} with syntax errors')
                 print(e)
+                row_data = {'DRE': student_id, 'list': list_id, 'n_tests': 1,
+                            'status': 0, 'question': 0, 'error_message': f'Syntax error: {e}'}
+                rows.append(row_data.copy())
                 continue
             run_tests_for_student(local_folder, student_module)
             
