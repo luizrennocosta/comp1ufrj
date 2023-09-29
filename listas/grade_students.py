@@ -62,7 +62,11 @@ def run_tests_for_student(local_folder, student_module):
     # pytest.main(['tests/test_questions.py', '--quiet'], plugins=[pytest_harvest.ResultsBagPlugin(results_dct)])
     
     pytest.main([f'{local_folder}/tests/test_questions.py', '--quiet', '--junitxml=results.xml'])
-    
+   
+    for func_name, func in student_module.__dict__.items():
+        if callable(func) and not func_name.startswith('__'):
+            delattr(sys.modules['tests.test_questions'], func_name)
+
 def upload_dataframe(df, start_cell = None):
     # Open the Google Spreadsheet using its name (or URL or key)
     spreadsheet = gc.open_by_key(os.getenv('GRADES_SHEETS_ID'))
@@ -121,7 +125,7 @@ def grade_students(local_folder):
 
     for student_file in os.listdir(f'{local_folder}/submissions'):
         if student_file.endswith('.py'):
-            student_id = os.path.splitext(student_file)[0]
+            student_id = os.path.splitext(student_file.lower())[0]
             try:
                 student_id, list_id = student_id.split('_')
             except:
@@ -138,6 +142,7 @@ def grade_students(local_folder):
                 student_module = import_student_module(student_id, student_module_path)
             except Exception as e:
                 print(f'file for student {student_file} with syntax errors')
+                print(e)
                 continue
             run_tests_for_student(local_folder, student_module)
             
@@ -147,11 +152,25 @@ def grade_students(local_folder):
             # Create a dictionary to represent the row of data
             row_data = {'DRE': student_id, 'list': list_id, 'n_tests': 1}
             for (test_name, example_name), (status, message) in test_results.items():
-                 
+                found_errors = []
+                if status == 'Failed':
+                    try:
+                        found_errors = re.findall(pattern, message)
+                    except Exception as e:
+                        print(f'something went wrong on findall')
+                        print(e)
+                        print(f'message: {message}')
+                        found_errors = -1
                 # Assuming a naming convention for tests as mentioned earlier
                 row_data['status'] = 10 if status == 'Passed' else 0
                 row_data['question'] = int(re.findall(r'\d+', test_name)[0])
-                row_data['error_message'] = (f'[{example_name}]-' + re.findall(pattern, message)[0] + '; ') if status == 'Failed' else None
+                if len(found_errors) > 0:
+                    row_data['error_message'] = (f'[{example_name}]-' + found_errors[0] + '; ') if status == 'Failed' else None
+                elif found_errors == -1:
+                    print(f'Unknown error found for {student_file}, needs further checking')
+                    row_data['error_message'] = (f'[{example_name}]-' + '; ') if status == 'Failed' else None
+                else:
+                    row_data['error_message'] = None
                 rows.append(row_data.copy())
     
     # Convert the list of rows to a DataFrame

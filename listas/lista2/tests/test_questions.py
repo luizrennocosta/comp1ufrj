@@ -1,6 +1,5 @@
 import pytest
 import math
-from answers import questao1, questao2, questao3, questao4, questao5  # Altere 'nome_do_arquivo' para o nome correto do arquivo onde as funções estão.
 import pickle
 import os
 import pathlib
