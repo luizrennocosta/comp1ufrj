@@ -52,6 +52,13 @@ def import_student_module(student_id, module_path):
     return module
 
 def run_tests_for_student(local_folder, student_module):
+    
+    for func_name, func in student_module.__dict__.items():
+        if callable(func) and not func_name.startswith("__"):
+            try:
+                delattr(sys.modules['tests.test_questions'], func_name)
+            except:
+                continue
     # We dynamically insert the student's functions into the test module namespace
     for func_name, func in student_module.__dict__.items():
         if callable(func) and not func_name.startswith("__"):
@@ -64,7 +71,7 @@ def run_tests_for_student(local_folder, student_module):
     pytest.main([f'{local_folder}/tests/test_questions.py', '--quiet', '--junitxml=results.xml'])
    
     for func_name, func in student_module.__dict__.items():
-        if callable(func) and not func_name.startswith('__'):
+        if callable(func):
             delattr(sys.modules['tests.test_questions'], func_name)
 
 def upload_dataframe(df, start_cell = None):
