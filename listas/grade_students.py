@@ -129,12 +129,16 @@ def grade_students(local_folder):
     # Creating a list to store the rows for our DataFrame
     rows = []
     pattern = r'E[\s]*([a-zA-Z]*Error:.*)'
-
+    dre_pattern = r'([\d]{9})'
+    lista_pattern = r'(lista[\d])'
     for student_file in os.listdir(f'{local_folder}/submissions'):
         if student_file.endswith('.py'):
             student_id = os.path.splitext(student_file.lower())[0]
             try:
-                student_id, list_id = student_id.split('_')
+                file_name = student_id
+                #student_id, list_id = student_id.split('_')
+                student_id = re.findall(dre_pattern, file_name)[0]
+                list_id = re.findall(lista_pattern, file_name.lower())[0]
             except:
                 print(f"Couldn't parse student ID and list ID from filename {student_file}")
                 continue
